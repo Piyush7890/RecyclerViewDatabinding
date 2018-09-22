@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+
+
+
+    <variable
+        name="user"
+        type="com.piyush.recyclerviewdatabinding.User"/>
+
+
+    </data>
+<android.support.constraint.ConstraintLayout
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:padding="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<ImageView
+    app:imageUrl="@{user.ImageUrl}"
+    app:layout_constraintStart_toStartOf="parent"
+    android:id="@+id/avatar"
+    android:layout_width="48dp"
+    android:layout_height="48dp" />
+    <TextView
+        android:layout_marginStart="16dp"
+        android:text="@{user.name}"
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="@id/name"
+        android:text="@{user.gender}"
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>
+</layout>
